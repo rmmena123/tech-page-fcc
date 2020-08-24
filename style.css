@@ -1,0 +1,125 @@
+/* ---------- RESET ---------- */
+
+:root {
+    --code-background: #C8BFC7;
+    --font-color: #242F40;
+    --btn-color: #E3B505;
+    --hover-color: #4B3B02;
+    --background-color: #eee;
+    --icon-color: #AA8703;
+    font-size: 100%;
+}
+
+html,
+body {
+  min-width: 290px;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+/* ---------- NAVBAR ---------- */
+
+#navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 100%;
+  border-right: solid;
+  border-color: var(--font-color);
+}
+
+header h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+#navbar ul {
+  height: 88%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar li {
+  list-style: none;
+  position: relative;
+  width: 100%;
+}
+
+#navbar a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--font-color);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  transition: 0.2s;
+}
+
+#navbar a:last-child {
+    margin-bottom: 0;
+}
+
+#navbar a:hover {
+    color: var(--hover-color);
+}
+
+#main-doc {
+  position: absolute;
+  margin-left: 310px;
+  padding: 3rem;
+}
+
+section li {
+  margin: 1rem 0px 0px 1rem;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre; /* Colocar em várias linhas */
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  padding: 0.5rem;
+  margin: 1rem;
+  border-radius: 5px;
+  color: var(--hover-color);
+  background-color: var(--code-background);
+}
+
+@media only screen and (max-width: 815px) {
+
+  #navbar {
+    position: static;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 2px solid var(--font-color);
+    padding-bottom: 2rem;
+  }
+
+  #main-doc {
+    margin: 0;
+    padding: 3rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #main-doc {
+    margin-left: -10px;
+  }
+
+  code {
+    margin-left: -20px;
+    width: 100%;
+    padding: 15px;
+    padding-left: 10px;
+    padding-right: 45px;
+    min-width: 233px;
+  }
+}

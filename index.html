@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -12,65 +13,401 @@
 
         <nav id="navbar">
             <header>
-                asfsdfsdfasdf
+                <h1>CSS Flexbox Layout Module</h1>
             </header>
-            <a href="#java_javas" class="nav-link">java_javas</a>
-            <a href="#java_java" class="nav-link">java_java</a>
-            <a href="#java_javaz" class="nav-link">java_javaz</a>
-            <a href="#java_javaa" class="nav-link">java_javaa</a>
-            <a href="#java_javas" class="nav-link">java_javas</a>
+            <a href="#what_is_flexbox" class="nav-link">What is Flexbox</a>
+            <a href="#flex_direction" class="nav-link">Flex Direction</a>
+            <a href="#flex_wrap" class="nav-link">Flex Wrap</a>
+            <a href="#flex_flow" class="nav-link">Flex Flow</a>
+            <a href="#justify_content" class="nav-link">Justify Content</a>
+            <a href="#align_items" class="nav-link">Align Items</a>
+            <a href="#align_content" class="nav-link">Align Content</a>
         </nav>
 
-        <section class="main-section" id="java_javas">
-            <header>java_javas</header>
-            <p>asfsdfsdfasdf</p>
-            <p>asfsdfsdfasdf</p>
-            <code>asfsdfsdfasdf</code>
+        <div id="content">
+        <!-- ---------- What is Flexbox ---------- -->
+
+        <section class="main-section" id="what_is_flexbox">
+            <header>
+                <h2>What is Flexbox</h2>
+            </header>
+
+            <p>Before the Flexbox Layout module, there were four layout modes:</p>
+
             <ul>
-                <li>asfsdfsdfasdf</li>
+                <li>Block, for sections in a webpage</li>
+                <li>Inline, for text</li>
+                <li>Table, for two-dimensional table data</li>
+                <li>Positioned, for explicit position of an element</li>
+            </ul>
+
+            <p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.</p>
+        </section>
+
+        <!-- ---------- Flex Direction ---------- -->
+
+        <section class="main-section" id="flex_direction">
+            <header>
+                <h2>Flex Direction</h2>
+            </header>
+
+            <p>The <strong>flex-direction</strong> property defines in which direction the container wants to stack the flex items.</p>
+
+            <ul>
+                <li>
+                    <p>The column value stacks the flex items vertically (from top to bottom):</p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>The column-reverse value stacks the flex items vertically (but from bottom to top):</p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            flex-direction: column-reverse;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>The row value stacks the flex items horizontally (from left to right):</p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            flex-direction: row;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>The row-reverse value stacks the flex items horizontally (but from right to left):</p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            flex-direction: row-reverse;
+                        }
+                    </code>
+                </li>
             </ul>
         </section>
 
-        <section class="main-section" id="java_java">
-            <header>java_java</header>
-            <p>asfsdfsdfasdf</p>
-            <p>asfsdfsdfasdf</p>
-            <code>asfsdfsdfasdf</code>
+        <!-- ---------- Flex Wrap ---------- -->
+
+        <section class="main-section" id="flex_wrap">
+            <header>
+                <h2>Flex Wrap</h2>
+            </header>
+
+            <p>The <strong>flex-wrap</strong> property specifies whether the flex items should wrap or not.</p>
+
             <ul>
-                <li>asfsdfsdfasdf</li>
+                <li>
+                    <p>
+                        The wrap value specifies that the flex items will wrap if necessary:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The nowrap value specifies that the flex items will not wrap (this is default):
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            flex-wrap: nowrap;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The wrap-reverse value specifies that the flexible items will wrap if necessary, in reverse order:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            flex-wrap: wrap-reverse;
+                        }
+                    </code>
+                </li>
             </ul>
         </section>
 
-        <section class="main-section" id="java_javaz">
-            <header>java_javaz</header>
-            <p>asfsdfsdfasdf</p>
-            <p>asfsdfsdfasdf</p>
-            <code>asfsdfsdfasdf</code>
+        <!-- ---------- Flex Flow ---------- -->
+
+        <section class="main-section" id="flex_flow">
+            <header>
+                <h2>Flex Flow</h2>
+            </header>
+
+            <p>The <strong>flex-flow</strong> property is a shorthand property for setting both the <strong>flex-direction</strong> and <strong>flex-wrap</strong> properties.</p>
+
+            <code>
+                .flex-container {
+                    display: flex;
+                    flex-flow: row wrap;
+                }
+            </code>
+        </section>
+
+        <!-- ---------- Justify Content ---------- -->
+
+        <section class="main-section" id="justify_content">
+            <header>
+                <h2>Justify Content</h2>
+            </header>
+
+            <p>The <strong>justify-content</strong> property is used to align the flex items:</p>
+
             <ul>
-                <li>asfsdfsdfasdf</li>
+                <li>
+                    <p>
+                        The center value aligns the flex items at the center of the container:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The flex-start value aligns the flex items at the beginning of the container (this is default):
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            justify-content: flex-start;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The flex-end value aligns the flex items at the end of the container:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            justify-content: flex-end;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The space-around value displays the flex items with space before, between, and after the lines:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            justify-content: space-around;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The space-between value displays the flex items with space between the lines:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            justify-content: space-between;
+                        }
+                    </code>
+                </li>
             </ul>
         </section>
 
-        <section class="main-section" id="java_javaa">
-            <header>java_javaa</header>
-            <p>asfsdfsdfasdf</p>
-            <p>asfsdfsdfasdf</p>
-            <code>asfsdfsdfasdf</code>
+        <!-- ---------- Align Items ---------- -->
+
+        <section class="main-section" id="align_items">
+            <header>
+                <h2>Align Items</h2>
+            </header>
+
+            <p>The <strong>align-items</strong> property is used to align the flex items.</p>
+
             <ul>
-                <li>asfsdfsdfasdf</li>
+                <li>
+                    <p>
+                        The center value aligns the flex items in the middle of the container:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            height: 200px;
+                            align-items: center;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The flex-start value aligns the flex items at the top of the container:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            height: 200px;
+                            align-items: flex-start;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The flex-end value aligns the flex items at the bottom of the container:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            height: 200px;
+                            align-items: flex-end;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The stretch value stretches the flex items to fill the container (this is default):
+                    </p>
+
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            height: 200px;
+                            align-items: stretch;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The baseline value aligns the flex items such as their baselines aligns:
+                    </p>
+
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            height: 200px;
+                            align-items: baseline;
+                        }
+                    </code>
+                </li>
             </ul>
         </section>
 
-        <section class="main-section" id="java_javas">
-            <header>java_javas</header>
-            <p>asfsdfsdfasdf</p>
-            <p>asfsdfsdfasdf</p>
-            <code>asfsdfsdfasdf</code>
+        <!-- ---------- Align Content ---------- -->
+
+        <section class="main-section" id="align_content">
+            <header>
+                <h2>Align Content</h2>
+            </header>
+
+            <p>The <strong>align-content</strong> property is used to align the flex lines.  </p>
+
             <ul>
-                <li>asfsdfsdfasdf</li>
+                <li>
+                    <p>
+                        The space-between value displays the flex lines with equal space between them:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            height: 600px;
+                            flex-wrap: wrap;
+                            align-content: space-between;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The space-around value displays the flex lines with space before, between, and after them:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            height: 600px;
+                            flex-wrap: wrap;
+                            align-content: space-around;
+                        } 
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The stretch value stretches the flex lines to take up the remaining space (this is default):
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            height: 600px;
+                            flex-wrap: wrap;
+                            align-content: stretch;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The center value displays display the flex lines in the middle of the container:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            height: 600px;
+                            flex-wrap: wrap;
+                            align-content: center;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The flex-start value displays the flex lines at the start of the container:
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            height: 600px;
+                            flex-wrap: wrap;
+                            align-content: flex-start;
+                        }
+                    </code>
+                </li>
+
+                <li>
+                    <p>
+                        The flex-end value displays the flex lines at the end of the container
+                    </p>
+                    <code>
+                        .flex-container {
+                            display: flex;
+                            height: 600px;
+                            flex-wrap: wrap;
+                            align-content: flex-end;
+                        }
+                    </code>
+                </li>
             </ul>
         </section>
-
+        </div>
     </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
